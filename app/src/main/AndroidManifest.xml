@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ckt.eirot.changecolor">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/chameleon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/BaseActivityTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+
+        <!-- Declarations for the widget -->
+        <receiver android:name=".EirotWidget" android:label="EirotWidget">
+            <intent-filter>
+                <action android:name="com.ckt.eirot.changecolor.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.android.calendar.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/eirot_widget" />
+        </receiver>
+    </application>
+
+</manifest>

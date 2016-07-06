@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ckt.eirot.changecolor.MainActivity">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/user"
+        android:layout_height="497dp"
+        android:layout_width="290dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        fresco:roundAsCircle="true"
+        fresco:placeholderImage="@color/wait_color"
+        fresco:failureImage="@color/error"
+        fresco:actualImageScaleType="focusCrop" />
+
+</LinearLayout>
